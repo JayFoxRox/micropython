@@ -44,10 +44,11 @@ MKDIR = mkdir
 SED = sed
 PYTHON = python
 
-AS = $(CROSS_COMPILE)as
-CC = $(CROSS_COMPILE)gcc
-CXX = $(CROSS_COMPILE)g++
-LD = $(CROSS_COMPILE)ld
+$(info crossbullshit ..$(CC)..)
+AS ?= $(CROSS_COMPILE)as
+CC ?= $(CROSS_COMPILE)gcc
+CXX ?= $(CROSS_COMPILE)g++
+LD ?= $(CROSS_COMPILE)ld
 OBJCOPY = $(CROSS_COMPILE)objcopy
 SIZE = $(CROSS_COMPILE)size
 STRIP = $(CROSS_COMPILE)strip

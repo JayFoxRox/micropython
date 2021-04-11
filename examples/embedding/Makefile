@@ -1,6 +1,9 @@
 MPTOP = ../..
-CFLAGS = -std=c99 -I. -I$(MPTOP) -DNO_QSTR
-LDFLAGS = -L.
+CROSS_COMPILE=nxdk #i686-windows
+CC=nxdk-cc
+CXX=nxdk-c++
+CFLAGS=-std=c99 -I. -I$(MPTOP) -DNO_QSTR
+LDFLAGS=-L.
 
 hello-embed: hello-embed.o -lmicropython
 
